@@ -93,31 +93,3 @@ more conversational, while official labour documents can
 help keep its answers reliable.
 ```
 
-## Step 3: 10 real ShramikSathi user questions
-
-Ab `Day-05/docs` mein ek aur file bana: `user_questions.md`.
-
-Maine pehle share kiye gaye ShramikSathi sample questions aur labour-law FAQs ko base banaya hai. Q6 jaan-boojhkar aisa rakha hai jiska jawab hamare 20-record dataset mein nahi hai.
-
-<CodeBlock language="markdown" editable>
-# ShramikSathi - 10 Real User Questions
-
-1. What is minimum wage?
-2. What is gratuity?
-3. What are the four Labour Codes?
-4. What components are included in wages?
-5. Is leave encashment part of wages?
-6. How many paid leave days can a private employee take for a family wedding in Maharashtra?
-7. Can a factory engage contract labour in core activities?
-8. How is gratuity calculated?
-9. Does overtime payment form part of the 50 percent wage calculation rule?
-10. How will ESI coverage be governed until the finalisation of Rules?
-
-## Important Dataset Check
-
-Question 6 is intentionally outside the scope of our
-current 20 FAQ records.
-
-The system should not invent an answer. It should indicate
-that the available dataset does not contain sufficient
-information to answer this question.

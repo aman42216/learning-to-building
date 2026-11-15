@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "topic": "Transition Rules",
+    "code_name": "All Four Labour Codes",
+    "question": "Which rules apply during the transition period?",
+    "keywords": ["transition", "old rules", "new rules", "applicable rules"],
+    "official_answer": "Under Section 6 of the General Clauses Act, 1897, old rules remain in force until new rules are finally notified under the relevant Code, to the extent that they are consistent with the Codes.",
+    "old_law": "Earlier Labour Acts and their rules -> Rules under the Four Labour Codes",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 2,
+    "topic": "Wages",
+    "code_name": "Code on Wages, 2019",
+    "question": "What does the term wages mean?",
+    "keywords": ["wages", "salary", "basic", "allowances", "da"],
+    "official_answer": "Wages include basic pay, dearness allowance and retaining allowance, if any. If other payments and allowances exceed 50 percent of total remuneration, the excess is added back to wages.",
+    "old_law": "Minimum Wages Act, 1948 and Payment of Wages Act, 1936 -> Code on Wages, 2019",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 3,
+    "topic": "Wages",
+    "code_name": "Code on Wages, 2019",
+    "question": "Which components are covered under the definition of wages?",
+    "keywords": ["components", "wages", "performance incentives", "esop", "reimbursement"],
+    "official_answer": "Wages cover remuneration including basic pay, dearness allowance and retaining allowance. Excess allowances above the 50 percent limit are added back. Performance-based incentives, ESOPs, variable components and reimbursement-based payments are excluded as stated in the FAQ.",
+    "old_law": "Payment of Wages Act, 1936 and Minimum Wages Act, 1948 -> Code on Wages, 2019",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 4,
+    "topic": "Wages",
+    "code_name": "Code on Wages, 2019",
+    "question": "What is the 50 percent rule for allowances?",
+    "keywords": ["50 percent", "50%", "allowance", "wage calculation"],
+    "official_answer": "If allowances and benefits together, excluding gratuity and retrenchment compensation, exceed 50 percent of total remuneration, the excess amount is added back to wages for statutory purposes.",
+    "old_law": "Payment of Wages Act, 1936 -> Code on Wages, 2019",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 5,
+    "topic": "Leave",
+    "code_name": "Code on Wages, 2019",
+    "question": "Is leave encashment part of allowances?",
+    "keywords": ["leave", "leave encashment", "encashment", "allowances"],
+    "official_answer": "No. As mentioned in Section 2(y) of the Code on Wages, 2019, leave encashment is not part of allowances.",
+    "old_law": "Earlier applicable wage provisions -> Code on Wages, 2019",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 6,
+    "topic": "Wages",
+    "code_name": "All Four Labour Codes",
+    "question": "Does the definition of wages apply to all labour laws?",
+    "keywords": ["all labour codes", "definition", "wages", "statutory calculation"],
+    "official_answer": "The single definition of wages applies across all four Labour Codes and is used uniformly for statutory calculations.",
+    "old_law": "Separate wage definitions under earlier labour laws -> Common definition under Four Labour Codes",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 7,
+    "topic": "Wages",
+    "code_name": "Code on Wages, 2019",
+    "question": "Can you explain the 50 percent allowance rule with an example?",
+    "keywords": ["example", "illustration", "50 percent", "76000", "22000"],
+    "official_answer": "The official example gives total remuneration of Rs 76,000, basic pay plus DA of Rs 20,000, allowances of Rs 40,000 and other components of Rs 16,000. The 50 percent limit is Rs 38,000. Total allowances are Rs 56,000, so Rs 2,000 excess is added back to wages. Revised wages are Rs 22,000.",
+    "old_law": "Payment of Wages Act, 1936 -> Code on Wages, 2019",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 8,
+    "topic": "Gratuity",
+    "code_name": "Code on Social Security, 2020",
+    "question": "From which date is the new gratuity calculation applicable?",
+    "keywords": ["gratuity", "date", "21 november", "2025", "applicable"],
+    "official_answer": "The revised gratuity provisions apply from 21 November 2025, the date of enforcement of the Labour Codes.",
+    "old_law": "Payment of Gratuity Act, 1972 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 9,
+    "topic": "Gratuity",
+    "code_name": "Code on Social Security, 2020",
+    "question": "What if a company considers December as its financial year end for gratuity?",
+    "keywords": ["december", "year end", "gratuity", "accounting"],
+    "official_answer": "Gratuity provisions apply from 21 November 2025. Establishments may make provisions according to applicable accounting norms.",
+    "old_law": "Payment of Gratuity Act, 1972 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 10,
+    "topic": "Gratuity",
+    "code_name": "Code on Social Security, 2020",
+    "question": "When is gratuity payable to an employee?",
+    "keywords": ["gratuity", "payable", "resignation", "retirement", "termination", "death"],
+    "official_answer": "Gratuity is payable on termination, superannuation, resignation, death or disablement due to accident or disease, expiration of a fixed-term employment contract, and other events notified by the Central Government.",
+    "old_law": "Payment of Gratuity Act, 1972 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 11,
+    "topic": "Gratuity",
+    "code_name": "Code on Social Security, 2020",
+    "question": "Are there special gratuity provisions for death, disability and fixed-term employment?",
+    "keywords": ["special", "death", "disability", "fixed term", "five years", "nominee"],
+    "official_answer": "Five years of continuous service is not necessary in cases of death, disablement, expiry of fixed-term employment and other notified events. Where a nominee or heir is a minor, the amount is to be protected and invested for the minor's benefit.",
+    "old_law": "Payment of Gratuity Act, 1972 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 12,
+    "topic": "Gratuity",
+    "code_name": "Code on Social Security, 2020",
+    "question": "How is gratuity calculated?",
+    "keywords": ["gratuity", "calculation", "15 days", "salary", "completed years"],
+    "official_answer": "For every completed year of service or part thereof exceeding six months, gratuity is generally calculated at 15 days' wages based on the last-drawn rate. Piece-rated employees, seasonal employees, fixed-term employees and deceased employees have specific calculation provisions, including pro-rata treatment where applicable.",
+    "old_law": "Payment of Gratuity Act, 1972 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 13,
+    "topic": "Gratuity",
+    "code_name": "Code on Social Security, 2020",
+    "question": "Can an employee receive better gratuity terms under an agreement?",
+    "keywords": ["better gratuity", "agreement", "award", "contract", "employer"],
+    "official_answer": "The Code does not affect an employee's right to receive better gratuity terms under an award, agreement or contract with the employer.",
+    "old_law": "Payment of Gratuity Act, 1972 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 14,
+    "topic": "Worker Definition",
+    "code_name": "OSH and Working Conditions Code, 2020",
+    "question": "Is a supervisor earning Rs 18,000 or more covered by the definition of worker?",
+    "keywords": ["supervisor", "18000", "worker", "supervisory", "wage limit"],
+    "official_answer": "A person employed in a supervisory capacity drawing wages exceeding Rs 18,000, or another amount notified by the Central Government, is excluded from the definition of worker under the provision addressed in the FAQ.",
+    "old_law": "Factories Act, 1948 and related labour laws -> OSH and Working Conditions Code, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 15,
+    "topic": "Contract Labour",
+    "code_name": "OSH and Working Conditions Code, 2020",
+    "question": "Can a factory engage contract labour for core activities?",
+    "keywords": ["core", "non-core", "contract", "contractor", "factory", "sugar factory"],
+    "official_answer": "Section 57 addresses core and non-core activities. Contract labour may be engaged in core activities in specified cases, including where the activity is ordinarily carried out through a contractor, is intermittent, or involves a sudden increase in work requiring time-bound completion. The facts and statutory exceptions must be checked.",
+    "old_law": "Contract Labour (Regulation and Abolition) Act, 1970 -> OSH and Working Conditions Code, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 16,
+    "topic": "Migrant Workers",
+    "code_name": "OSH and Working Conditions Code, 2020",
+    "question": "Is journey allowance payable to inter-state migrant workers?",
+    "keywords": ["journey", "migrant", "inter state", "travel allowance", "native place"],
+    "official_answer": "The employer shall pay to and fro journey allowance to an inter-state migrant worker once in a year for travel from the worker's native place to the place of employment, as provided under the Code.",
+    "old_law": "Inter-State Migrant Workmen Act, 1979 -> OSH and Working Conditions Code, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 17,
+    "topic": "ESI",
+    "code_name": "Code on Social Security, 2020",
+    "question": "How will ESI coverage work until the rules are finalized?",
+    "keywords": ["esi", "insurance", "coverage", "21000", "social security"],
+    "official_answer": "The definition of wages under the Code on Social Security, 2020 came into force from 21 November 2025. The original FAQ confirms the effective date of the wage definition; consult the later official ESI clarification for the currently applicable coverage threshold.",
+    "old_law": "Employees' State Insurance Act, 1948 -> Code on Social Security, 2020",
+    "faq_date": "30-12-2025",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/01/de4758d5bfeffc456d7de97a801891b0.pdf"
+  },
+  {
+    "id": 18,
+    "topic": "Overtime and Wages",
+    "code_name": "Code on Wages, 2019",
+    "question": "Does overtime payment form part of the 50 percent wage calculation rule?",
+    "keywords": ["overtime", "ot", "50 percent", "pf", "pension", "remuneration"],
+    "official_answer": "Overtime allowance forms part of the 50 percent wage calculation. Statutory employer PF and pension contributions and statutory bonus are included for arriving at remuneration. Gratuity, ESI and other retirement benefits are not included.",
+    "old_law": "Payment of Wages Act, 1936 and related wage laws -> Code on Wages, 2019",
+    "faq_date": "16-03-2026",
+    "source_url": "https://www.labour.gov.in/static/uploads/2026/03/a4ccf4c6d97c4f1f36a6d83f8c64213d.pdf"
+  },
+  {
+  "id": 19,
+  "topic": "Wages",
+  "code_name": "Code on Wages, 2019",
+  "question": "Are employer and employee PF contributions, statutory bonus, ESI and retirement benefits included in other allowances?",
+  "keywords": ["employer pf", "employee pf", "esi", "statutory bonus", "retirement benefits"],
+  "official_answer": "The official Additional FAQs PDF lists this clarification question but provides no reply. Please refer to the original notification and applicable statutory provisions.",
+  "old_law": "Earlier wage laws -> Code on Wages, 2019",
+  "faq_date": "16-03-2026",
+  "source_url": "https://www.labour.gov.in/static/uploads/2026/03/a4ccf4c6d97c4f1f36a6d83f8c64213d.pdf"
+},
+{
+  "id": 20,
+  "topic": "Wage Protection",
+  "code_name": "Code on Wages, 2019",
+  "question": "Are there legal provisions for wage protection of white-collar employees?",
+  "keywords": ["white collar", "wage protection", "timely payment", "office employees"],
+  "official_answer": "Yes. The Code on Wages, 2019 contains provisions for timely payment of wages. These provisions apply to all employees.",
+  "old_law": "Payment of Wages Act, 1936 -> Code on Wages, 2019",
+  "faq_date": "16-03-2026",
+  "source_url": "https://www.labour.gov.in/static/uploads/2026/03/a4ccf4c6d97c4f1f36a6d83f8c64213d.pdf"
+}
+]

@@ -8,3 +8,12 @@ __pycache__/
 
 # Virtual environment
 venv/
+
+# Day-07 ChromaDB persistent database
+Day-07/chroma_db/
+
+# Day-07 Python cache
+Day-07/**/__pycache__/
+
+# Day-07 virtual environment files
+Day-07/.env

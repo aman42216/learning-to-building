@@ -1,4 +1,4 @@
-
+import os
 import streamlit as st
 import requests
 import json
@@ -126,9 +126,9 @@ mode = st.sidebar.selectbox(
 )
 
 default_url = (
-    "http://127.0.0.1:8008"
+    os.getenv("RAG_API_URL", "http://127.0.0.1:8008")
     if mode == "RAG"
-    else "http://127.0.0.1:8009"
+    else os.getenv("AGENT_API_URL", "http://127.0.0.1:8009")
 )
 
 api_url = st.sidebar.text_input("API URL", default_url)

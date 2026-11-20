@@ -3,7 +3,8 @@ from pathlib import Path
 
 from embed import get_embedding_function
 
-DB_PATH = Path("Day-07/chroma_db")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DB_PATH = PROJECT_ROOT / "Day-07" / "chroma_db"
 COLLECTION_NAME = "shramiksathi_documents"
 
 

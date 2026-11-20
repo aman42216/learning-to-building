@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+groq
+python-dotenv
+pydantic
+chromadb
+pypdf
+streamlit
+requests
+langgraph
+langchain-core

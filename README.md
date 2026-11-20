@@ -68,3 +68,58 @@ The goal of ShramikSathi is to make labour-rights information more understandabl
 ---
 **Project Name:** ShramikSathi
 **Domain:** Python, Artificial Intelligence and Labour Rights Information
+
+
+## Day-11: Testing and Docker Deployment
+
+### Testing
+- Created 18 automated pytest tests.
+- Tested FAQ records and semantic search.
+- Tested FastAPI health and ask endpoints.
+- Tested Agent calculator functionality.
+- All 18 tests passed.
+
+Run tests:
+```bash
+python -m pytest -v
+```
+
+### Docker Deployment
+The ShramikSathi application runs using Docker Compose.
+
+Services:
+- RAG API: http://localhost:8008
+- Agent API: http://localhost:8009
+- Streamlit UI: http://localhost:8501
+
+### Run with Docker
+
+1. Install Docker Desktop.
+2. Configure `Day-06/.env` with your Groq API key.
+3. Build Docker images:
+
+```bash
+docker compose build
+```
+
+4. Start all services:
+
+```bash
+docker compose up -d
+```
+
+5. Stop services:
+
+```bash
+docker compose down
+```
+
+### ChromaDB
+- Persistent Docker volume: `chroma_data`
+- Automatically indexes 145 document chunks during RAG API startup.
+
+### Docker Files
+- `Dockerfile`
+- `.dockerignore`
+- `docker-compose.yml`
+- `requirements.txt`

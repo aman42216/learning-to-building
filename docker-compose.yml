@@ -1,0 +1,39 @@
+
+services:
+  rag-api:
+    build: .
+    working_dir: /app/Day-08/app
+    command: sh -c "python /app/Day-07/app/init_db.py && uvicorn main:app --host 0.0.0.0 --port 8008"
+    ports:
+      - "8008:8008"
+    env_file:
+      - ./Day-06/.env
+    volumes:
+      - chroma_data:/app/Day-07/chroma_db
+
+  agent-api:
+    build: .
+    working_dir: /app/Day-09/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8009
+    ports:
+      - "8009:8009"
+    env_file:
+      - ./Day-06/.env
+    volumes:
+      - chroma_data:/app/Day-07/chroma_db
+
+  ui:
+    build: .
+    working_dir: /app/Day-10/ui
+    command: streamlit run app.py --server.address=0.0.0.0 --server.port=8501
+    ports:
+      - "8501:8501"
+    environment:
+      RAG_API_URL: http://rag-api:8008
+      AGENT_API_URL: http://agent-api:8009
+    depends_on:
+      - rag-api
+      - agent-api
+
+volumes:
+  chroma_data:

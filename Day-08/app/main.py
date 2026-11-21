@@ -26,6 +26,14 @@ def home():
     }
 
 
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "service": "ShramikSathi RAG API"
+    }
+
+
 @app.post("/ask")
 def ask(data: AskRequest):
     question = data.question.strip()

@@ -1,45 +1,52 @@
 
-import sys
+import json
 from pathlib import Path
+from functools import lru_cache
 
-# Project paths
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+import sys
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
 DAY06_APP = PROJECT_ROOT / "Day-06" / "app"
-DAY07_APP = PROJECT_ROOT / "Day-07" / "app"
+CHUNKS_FILE = PROJECT_ROOT / "Day-07" / "data" / "processed" / "chunks.json"
 
-# Add existing project modules to Python path
 sys.path.insert(0, str(DAY06_APP))
-sys.path.insert(0, str(DAY07_APP))
-
 from llm import generate_response
-from vectorstore import get_collection
-from embed import semantic_search
 
 
-RELEVANCE_THRESHOLD = 0.50
 TOP_K = 5
-
+RELEVANCE_THRESHOLD = 0.05
 
 SYSTEM_PROMPT = """
 You are ShramikSathi, an assistant for Indian labour laws.
-
-Rules:
-1. Answer only using the supplied retrieved context.
-2. Never invent legal rules, dates, amounts or facts.
-3. If context does not contain enough information, say:
-   I don't know.
-4. Use simple and clear language.
-5. Do not provide unsupported legal advice.
-6. Do not invent citations.
+Answer only using the supplied retrieved context.
+Never invent legal rules, dates, amounts or facts.
+If context is insufficient, reply exactly: I don't know.
+Use simple language and do not invent citations.
 """
 
 
+@lru_cache(maxsize=1)
+def load_search_data():
+    with open(CHUNKS_FILE, "r", encoding="utf-8") as file:
+        chunks = json.load(file)
+
+    documents = [chunk["text"] for chunk in chunks]
+
+    vectorizer = TfidfVectorizer(
+        stop_words="english",
+        ngram_range=(1, 2)
+    )
+
+    matrix = vectorizer.fit_transform(documents)
+
+    return chunks, vectorizer, matrix
+
+
 def is_q6_question(question):
-    """Identify the unsupported Maharashtra wedding-leave question."""
-
     text = question.lower()
-
     return (
         "maharashtra" in text
         and "wedding" in text
@@ -53,7 +60,6 @@ def ask_question(question, top_k=TOP_K):
     if not question:
         raise ValueError("Question cannot be empty")
 
-    # Mandatory abstention for Day-05 Q6
     if is_q6_question(question):
         return {
             "question": question,
@@ -62,39 +68,18 @@ def ask_question(question, top_k=TOP_K):
             "citations": []
         }
 
-    # Retrieve relevant chunks from ChromaDB
-    collection = get_collection()
+    chunks, vectorizer, matrix = load_search_data()
 
-    if collection.count() == 0:
-        return {
-            "question": question,
-            "answer": "I don't know.",
-            "answerable": False,
-            "citations": []
-        }
+    query_vector = vectorizer.transform([question])
+    scores = cosine_similarity(query_vector, matrix).flatten()
 
-    results = semantic_search(
-        collection,
-        question,
-        top_k=top_k
-    )
+    top_indices = scores.argsort()[::-1][:top_k]
 
-    documents = results["documents"][0]
-    metadatas = results["metadatas"][0]
-    distances = results["distances"][0]
-
-    # Keep only sufficiently relevant chunks
-    relevant_chunks = []
-
-    for document, metadata, distance in zip(
-        documents, metadatas, distances
-    ):
-        if distance <= RELEVANCE_THRESHOLD:
-            relevant_chunks.append({
-                "text": document,
-                "metadata": metadata,
-                "distance": distance
-            })
+    relevant_chunks = [
+        (chunks[i], float(scores[i]))
+        for i in top_indices
+        if scores[i] >= RELEVANCE_THRESHOLD
+    ]
 
     if not relevant_chunks:
         return {
@@ -104,12 +89,10 @@ def ask_question(question, top_k=TOP_K):
             "citations": []
         }
 
-    # Prepare retrieved context
     context_parts = []
-
     citations = []
 
-    for chunk in relevant_chunks:
+    for chunk, score in relevant_chunks:
         metadata = chunk["metadata"]
 
         context_parts.append(
@@ -128,41 +111,26 @@ def ask_question(question, top_k=TOP_K):
         if citation not in citations:
             citations.append(citation)
 
-    context = "\n\n".join(context_parts)
-
     prompt = f"""
 User question:
 {question}
 
 Retrieved official information:
-{context}
+{"".join(context_parts)}
 
-Answer the question using only the retrieved information.
-
-If the information is insufficient, reply exactly:
-I don't know.
-
+Answer using only the retrieved information.
+If insufficient, reply exactly: I don't know.
 Return only the answer text.
 """
 
-    # Generate grounded answer using Groq
-    try:
-        answer = generate_response(
-            prompt,
-            SYSTEM_PROMPT
-        )
+    answer = generate_response(prompt, SYSTEM_PROMPT).strip()
 
-        answer = answer.strip()
+    if not answer:
+        answer = "I don't know."
 
-        if not answer:
-            answer = "I don't know."
-
-        return {
-            "question": question,
-            "answer": answer,
-            "answerable": answer.lower() != "i don't know.",
-            "citations": citations
-        }
-
-    except Exception:
-        raise RuntimeError("Unable to generate RAG response")
+    return {
+        "question": question,
+        "answer": answer,
+        "answerable": answer.lower() != "i don't know.",
+        "citations": citations
+    }

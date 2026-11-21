@@ -8,20 +8,22 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parents[1]
 load_dotenv(BASE_DIR / ".env")
 
-API_KEY = os.getenv("GROQ_API_KEY")
 MODEL_NAME = os.getenv(
     "GROQ_MODEL",
     "llama-3.3-70b-versatile"
 )
 
-# Create Groq client
-if not API_KEY:
-    raise ValueError("Groq API key not found in Day-06/.env")
-
-client = Groq(api_key=API_KEY)
-
 
 def generate_response(prompt, system_prompt):
+    # Check API key only when function is called
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        raise ValueError("Groq API key not found in Day-06/.env")
+
+    # Create client when needed
+    client = Groq(api_key=api_key)
+
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[

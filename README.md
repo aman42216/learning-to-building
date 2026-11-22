@@ -1,6 +1,14 @@
 
 # ShramikSathi â€“ Labour Rights Information Assistant
 
+# ShramikSathi
+
+[![ShramikSathi CI](https://github.com/aman42216/learning-to-building/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aman42216/learning-to-building/actions/workflows/ci.yml)
+
+**Live API:** https://learning-to-building-wo8y.onrender.com
+
+**Health Check:** https://learning-to-building-wo8y.onrender.com/health
+
 ## 1. Project Overview
 
 ShramikSathi is a Python-based Labour Rights Information Assistant developed to help Indian workers understand their labour rights in simple language.

@@ -2,6 +2,7 @@
 import importlib.util
 import sys
 from pathlib import Path
+import numpy as np
 
 from fastapi.testclient import TestClient
 
@@ -71,33 +72,41 @@ def test_health_endpoint_response():
     }
 
 
-# Test 3: Ask endpoint with fake LLM
+# Test 3: Ask endpoint with fake LLM and TF-IDF
 def test_ask_endpoint_with_fake_llm(monkeypatch):
 
-    class FakeCollection:
-        def count(self):
-            return 1
+    # Fake vectorizer
+    class FakeVectorizer:
+        def transform(self, questions):
+            return [[1.0]]
 
-    monkeypatch.setattr(
-        rag,
-        "get_collection",
-        lambda: FakeCollection()
-    )
-
-    monkeypatch.setattr(
-        rag,
-        "semantic_search",
-        lambda collection, question, top_k: {
-            "documents": [["Official gratuity information"]],
-            "metadatas": [[{
+    # Fake chunk data
+    fake_chunks = [
+        {
+            "text": "Official gratuity information",
+            "metadata": {
                 "title": "Test Labour FAQ",
                 "source": "test.json",
                 "page": 1
-            }]],
-            "distances": [[0.2]]
+            }
         }
+    ]
+
+    # Mock TF-IDF data loading
+    monkeypatch.setattr(
+        rag,
+        "load_search_data",
+        lambda: (fake_chunks, FakeVectorizer(), [[1.0]])
     )
 
+    # Mock similarity score
+    monkeypatch.setattr(
+        rag,
+        "cosine_similarity",
+        lambda query, matrix: np.array([[0.9]])
+    )
+
+    # Mock Groq LLM
     monkeypatch.setattr(
         rag,
         "generate_response",

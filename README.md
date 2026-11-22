@@ -131,3 +131,25 @@ docker compose down
 - `.dockerignore`
 - `docker-compose.yml`
 - `requirements.txt`
+
+## Production Notes
+
+### Performance Monitoring
+
+| Metric | First Request | Cached Request |
+|---|---:|---:|
+| RAG Latency | 6980.17 ms | 0.03 ms |
+| LLM Latency | 2611.63 ms | Not Called |
+| Prompt Tokens | 2056 | 0 |
+| Completion Tokens | 411 | 0 |
+| Cache Status | MISS | HIT |
+
+Note: These are sample measurements from a local test run.
+Performance may vary depending on API response time and system conditions.
+
+### Production Features
+- Request latency logging
+- LLM token usage tracking
+- Response caching
+- Input length validation
+- Prompt injection protection

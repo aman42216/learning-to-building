@@ -155,3 +155,43 @@ def test_prompt_injection_is_rejected():
     assert data["answerable"] is False
     assert data["answer"] == "I don't know."
     assert data["citations"] == []
+
+def test_rank_relevant_chunks_prefers_newer_dates():
+    chunks = [
+        {
+            "text": "December FAQ",
+            "metadata": {
+                "published_date": "2025-12-30"
+            }
+        },
+        {
+            "text": "May Central Rules",
+            "metadata": {
+                "effective_date": "2026-05-08"
+            }
+        },
+        {
+            "text": "October Consolidated FAQ",
+            "metadata": {
+                "as_of_date": "2026-10-25"
+            }
+        }
+    ]
+
+    scores = np.array([0.8, 0.8, 0.8])
+
+    ranked = rag.rank_relevant_chunks(
+        chunks,
+        scores,
+        top_k=3
+    )
+
+    actual_order = [
+        chunk["text"] for chunk, score in ranked
+    ]
+
+    assert actual_order == [
+        "October Consolidated FAQ",
+        "May Central Rules",
+        "December FAQ"
+    ]

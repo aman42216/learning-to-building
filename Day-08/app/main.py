@@ -1,14 +1,29 @@
 
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 from rag import ask_question
+
+
+BASE_DIR = Path(__file__).resolve().parent
+STATIC_DIR = BASE_DIR / "static"
 
 
 app = FastAPI(
     title="ShramikSathi RAG API",
     description="Labour law question answering using RAG",
     version="1.0.0"
+)
+
+# Serve frontend static files
+app.mount(
+    "/static",
+    StaticFiles(directory=STATIC_DIR),
+    name="static"
 )
 
 
@@ -19,11 +34,9 @@ class AskRequest(BaseModel):
     )
 
 
-@app.get("/")
+@app.get("/", include_in_schema=False)
 def home():
-    return {
-        "message": "ShramikSathi RAG API is running"
-    }
+    return FileResponse(STATIC_DIR / "index.html")
 
 
 @app.get("/health")

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123b32">
+    <title>ShramikSathi | Labour Rights Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">⚖</div>
+                <div>
+                    <h2>ShramikSathi</h2>
+                    <span>Worker Rights Assistant</span>
+                </div>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+                <span>＋</span> New Conversation
+            </button>
+
+            <div class="sidebar-section">
+                <p class="section-label">EXPLORE TOPICS</p>
+
+                <button class="topic-btn" data-question="What are my minimum wage rights?">
+                    <span>₹</span> Wages & Minimum Pay
+                </button>
+
+                <button class="topic-btn" data-question="How is gratuity calculated under Indian labour laws?">
+                    <span>◈</span> Gratuity Benefits
+                </button>
+
+                <button class="topic-btn" data-question="What are the rules for paid leave?">
+                    <span>▦</span> Leave & Holidays
+                </button>
+
+                <button class="topic-btn" data-question="What social security benefits are available to workers?">
+                    <span>♡</span> Social Security
+                </button>
+
+                <button class="topic-btn" data-question="What rights do contract workers have?">
+                    <span>♧</span> Contract Labour
+                </button>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="trust-card">
+                    <span class="trust-icon">✓</span>
+                    <div>
+                        <strong>Source-based answers</strong>
+                        <p>Information with official document references.</p>
+                    </div>
+                </div>
+
+                <p class="sidebar-footer">ShramikSathi · AI Assistant</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <span class="mobile-brand">⚖ ShramikSathi</span>
+                    <p class="page-subtitle">Your Labour Rights Information Assistant</p>
+                </div>
+
+                <div class="connection-status">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span id="statusText">Checking connection...</span>
+                </div>
+            </header>
+
+            <section class="chat-section">
+
+                <div class="welcome-section" id="welcomeSection">
+                    <div class="welcome-icon">⚖</div>
+
+                    <span class="welcome-tag">YOUR DIGITAL LABOUR GUIDE</span>
+
+                    <h1>Namaste! How can we<br><span>help you today?</span></h1>
+
+                    <p>
+                        Understand your workplace rights and labour benefits
+                        through simple, AI-powered answers.
+                    </p>
+
+                    <div class="suggestion-grid">
+                        <button class="suggestion-card"
+                            data-question="What are my minimum wage rights?">
+                            <span class="suggestion-icon">₹</span>
+                            <strong>Minimum Wages</strong>
+                            <small>Understand wage rights</small>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-question="How is gratuity calculated under Indian labour laws?">
+                            <span class="suggestion-icon">◈</span>
+                            <strong>Gratuity</strong>
+                            <small>Understand your benefits</small>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-question="What are the rules for paid leave?">
+                            <span class="suggestion-icon">▦</span>
+                            <strong>Paid Leave</strong>
+                            <small>Know your leave rights</small>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-question="What social security benefits are available to workers?">
+                            <span class="suggestion-icon">♡</span>
+                            <strong>Social Security</strong>
+                            <small>Explore worker protection</small>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat messages -->
+                <div class="chat-messages" id="chatMessages"
+                     aria-live="polite"></div>
+
+                <!-- Chat input -->
+                <form class="chat-input-container" id="chatForm">
+
+                    <textarea
+                        id="questionInput"
+                        placeholder="Ask anything about your labour rights..."
+                        maxlength="500"
+                        rows="1"
+                        required
+                        aria-label="Ask your labour law question"
+                    ></textarea>
+
+                    <div class="input-bottom">
+                        <span>AI-generated guidance · Verify important legal decisions with official sources.</span>
+
+                        <button type="submit" id="sendBtn">
+                            <span>Send</span>
+                            <span>➤</span>
+                        </button>
+                    </div>
+
+                </form>
+
+                <p class="page-disclaimer">
+                    ShramikSathi provides information from available official documents.
+                    It is not a substitute for professional legal advice.
+                </p>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -5,6 +5,9 @@
 
 [![ShramikSathi CI](https://github.com/aman42216/learning-to-building/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aman42216/learning-to-building/actions/workflows/ci.yml)
 
+**Live API / Swagger Docs:** 
+https://learning-to-building-wo8y.onrender.com/docs
+
 **Live API:** https://learning-to-building-wo8y.onrender.com
 
 **Health Check:** https://learning-to-building-wo8y.onrender.com/health

@@ -25,8 +25,8 @@
 - [x] Close all remaining open items.
 - [x] Rehearse the complete project demo – First attempt.
 - [x] Rehearse the complete project demo – Second attempt.
-- [ ] Create the final Git tag.
-- [ ] Verify final GitHub repository and CI status.
+- [x] Create the final Git tag.
+- [x] Verify final GitHub repository and CI status.
 
 ## Latest Verified Results
 - Automated tests: 20 passed.

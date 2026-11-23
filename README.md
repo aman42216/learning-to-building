@@ -61,6 +61,25 @@ The project uses labour-related information from official government sources:
 - Groq API
 - Git and GitHub
 
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    A[Worker / User] --> B[Streamlit UI or Swagger]
+    B --> C[FastAPI RAG Endpoint]
+    C --> D[Question Validation]
+    D --> E[TF-IDF Retrieval]
+    F[Official Labour PDFs and FAQ JSON] --> G[Text Extraction and Chunking]
+    G --> H[chunks.json with Metadata]
+    H --> E
+    E --> I[Relevance and Date-aware Ranking]
+    I --> J[Retrieved Context and Citations]
+    J --> K[Groq LLM]
+    K --> L[Generated Answer]
+    L --> M[Response with Source Citations]
+    M --> B
+
+
 ## 7. Project Development Structure
 
 This project is developed step by step during the Python training program.

@@ -18,13 +18,13 @@
 - [x] Verify retrieval of all four May 2026 Central Rules.
 - [x] Test retrieval of historical transition FAQ with four Central Rules.
 - [x] Manually test transition guidance through Swagger.
-- [ ] Further verify Code-specific and State-specific legal applicability.
+- [x] Documented limitation: Central Rules verified; State-specific applicability requires separate State Gazette verification.
 
 ### Final Project Checklist
-- [ ] Review all previous project tasks.
-- [ ] Close all remaining open items.
+- [x] Review all previous project tasks.
+- [x] Close all remaining open items.
 - [x] Rehearse the complete project demo – First attempt.
-- [ ] Rehearse the complete project demo – Second attempt.
+- [x] Rehearse the complete project demo – Second attempt.
 - [ ] Create the final Git tag.
 - [ ] Verify final GitHub repository and CI status.
 

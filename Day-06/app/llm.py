@@ -6,7 +6,6 @@ from pathlib import Path
 
 from groq import Groq
 from dotenv import load_dotenv
-import logging
 
 logging.basicConfig(
     level=logging.INFO,
